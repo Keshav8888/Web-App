@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Spring MVC Project</title>
 </head>
-<body bgcolor="yellow">
+<body bgcolor="yellow">   
 
 	<h1>This is first MVC Project</h1>
 
