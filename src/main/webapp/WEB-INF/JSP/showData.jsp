@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>electronics page: ${user}</h1>
+  <h1>All data from the form</h1>
+  <h2>Username: ${username}</h2>
+  <h2>Department: ${department}</h2>
+  <h2>Address: ${address}</h2>
 </body>
 </html>

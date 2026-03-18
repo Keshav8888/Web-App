@@ -8,7 +8,7 @@
 </head>
 <body bgcolor="yellow">   
 
-	<h1>This is first MVC Project</h1>
+	<h1>Welcome !</h1>
 
 </body>
 </html>
