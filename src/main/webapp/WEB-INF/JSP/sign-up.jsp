@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sign Up</title>
+
 <style>
 body{
     font-family: Arial;
@@ -34,15 +35,15 @@ button{
     width: 100%;
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
 <h2>Sign Up</h2>
 
-<form action="${pageContext.request.contextPath}/postForm" method="post">
+<form action="${pageContext.request.contextPath}/createUser" method="post">
 
 <label>Username</label>
 <input type="text" name="username" required>
@@ -60,3 +61,4 @@ button{
 </div>
 
 </body>
+</html>
