@@ -1,9 +1,11 @@
 package com.spring.mvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WelcomeController {
@@ -15,9 +17,12 @@ public class WelcomeController {
 		return "index";
 	}
 	
-	@GetMapping("/sign-up")
-	public String createUser() {
-		System.out.println("WelcomeController.greeting()");
+	@GetMapping("/req-param")
+	public String createUser(@RequestParam(name = "user") String name, Model model) {
+		model.addAttribute("user",name);
+		
+		System.out.println("WelcomeController.greeting()"+ name);
+		
 		return "success";
 	}
 }
