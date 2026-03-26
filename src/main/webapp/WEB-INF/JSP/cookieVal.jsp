@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor=grey>
 
 	<h1>Welcome ! This is your ${firstCookie}</h1>
 
