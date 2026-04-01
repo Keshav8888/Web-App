@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Grocery</title>
 </head>
 <body>
-	<h1>grocery page :${user}</h1>
+	<h1>This is Grocery Page</h1>
 </body>
 </html>

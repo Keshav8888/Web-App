@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Spring MVC Project</title>
+<title>Footwear</title>
 </head>
-<body bgcolor="yellow">   
-
-	<h1>This is first MVC Project</h1>
-
+<body>
+	<h1>This is FootWear Page</h1>
 </body>
 </html>
