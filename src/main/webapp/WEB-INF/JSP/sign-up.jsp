@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 
-<style>
+<%-- <style>
 body{
     font-family: Arial;
     background-color: #f2f2f2;
@@ -34,7 +34,8 @@ button{
     border: none;
     width: 100%;
 }
-</style>
+</style> --%>
+
 </head>
 
 <body>
@@ -43,7 +44,7 @@ button{
 
 <h2>Sign Up</h2>
 
-<form action="${pageContext.request.contextPath}/createUser" method="post">
+<form action="${pageContext.request.contextPath}/signupUser" method="post">
 
 <label>Username</label>
 <input type="text" name="username" required>

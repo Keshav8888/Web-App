@@ -9,10 +9,9 @@
 
 <body bgcolor="pink">
 
-  <h1>Welcome ! Your EmpId is: ${employee.id}</h1>
-  <h2>Welcome ! Your Username is: Mr. ${employee.username}</h2>
-  <h2>Welcome ! Your Department is: ${employee.department}</h2>
-  <h2>Welcome ! Your Address is: ${employee.address}</h2>
+  <h1>Welcome !! Your Username is: Mr. ${username}</h1>
+  <h1>Welcome !! Your Department is: ${department}</h1>
+  <h1>Welcome !! Your Address is: ${address}</h1>
   
 </body>
 </html>
