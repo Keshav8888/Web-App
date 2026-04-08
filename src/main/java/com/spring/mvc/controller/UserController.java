@@ -24,13 +24,13 @@ public class UserController {
 	@PostMapping("/signupUser")
 	public String postUser(@RequestParam(name = "username") String username, @RequestParam(name = "department") String department,@RequestParam(name = "address")String address,Model model) {
 		
-		System.out.println("Username : "+username);;
+		System.out.println("Username : "+username);
 		System.out.println("Department : "+department);
-		System.out.println("Address : "+address);;
+		System.out.println("Address : "+address);
 
-		model.addAttribute("username"+username);
-		model.addAttribute("department"+department);
-		model.addAttribute("address"+address);
+		model.addAttribute("username", username);
+		model.addAttribute("department", department);
+		model.addAttribute("address", address);
 		
 		return "success";
 	}
