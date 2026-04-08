@@ -18,8 +18,9 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>5.3.28</version> <!-- Use a compatible version -->
+			<version>5.3.29</version> <!-- Use a compatible version -->
 		</dependency>
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -33,7 +34,17 @@
 			<version>8.0.33</version>
 		</dependency>
 
-
+		<dependency>
+    		<groupId>org.apache.tomcat.embed</groupId>
+    		<artifactId>tomcat-embed-jasper</artifactId>
+    		<version>9.0.83</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>javax.el</groupId>
+    		<artifactId>javax.el-api</artifactId>
+    		<version>3.0.0</version>
+		</dependency>
 		
 		<dependency>
 			<groupId>javax.servlet</groupId>
