@@ -44,7 +44,7 @@ button{
 
 <h2>Sign Up</h2>
 
-<form action="${pageContext.request.contextPath}/signupUser" method="post">
+<form action="${pageContext.request.contextPath}/createUser" method="post">
 
 <label>Username</label>
 <input type="text" name="username" required>

@@ -1,14 +1,21 @@
 package com.spring.mvc.controller;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.spring.mvc.model.Employee;
 
 @Controller
 public class UserController {
 
+	Map<Integer,Employee> map = new Hashmap<>();
+	
 	@GetMapping("/")
 	public String welcome() {
 		System.out.println("UserController.welcome()");
@@ -33,5 +40,14 @@ public class UserController {
 		model.addAttribute("address", address);
 		
 		return "success";
+	}
+	
+	
+	@PostMapping("/createUser")
+	public String createUser(@ModelAttribute Employee employee) {
+		
+		System.out.println(employee);
+		
+		return "index";
 	}
 }
