@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Footwear</title>
+<title>FootWear</title>
 </head>
 <body>
 	<h1>This is FootWear Page</h1>
