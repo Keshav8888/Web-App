@@ -31,7 +31,7 @@ public class UserController {
 	@GetMapping("/")
 	public String welcome() {
 		System.out.println("UserController.welcome()");
-		return "index";
+		return "indexPage";
 	}
 	
 	@GetMapping("/sign-up")
@@ -66,7 +66,7 @@ public class UserController {
 		return "success";
 	}
 	
-		@GetMapping("/getEmpById")
+		@GetMapping("/getEmpById/{id}")
 		public String getEmp(@PathVariable(name="id")int id,Model model) {
 			
 			 Employee e=map.get(id);
