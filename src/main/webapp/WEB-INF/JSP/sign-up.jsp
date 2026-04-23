@@ -9,7 +9,7 @@
 <style>
 body{
     font-family: Arial;
-    background-color: #f2f2f2;
+    background-color: grey;
 }
 
 .container{
