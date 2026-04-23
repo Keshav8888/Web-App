@@ -1,8 +1,8 @@
 package com.spring.mvc.configuration;
 
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRegistration;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -13,7 +13,7 @@ public class MyWebServlet implements WebApplicationInitializer {
 	public void onStartup(ServletContext ctx) throws ServletException {
 		System.out.println("MyWebServlet is loading...");
 		AnnotationConfigWebApplicationContext annWebConfig = new AnnotationConfigWebApplicationContext();
-		annWebConfig.register(SpringConfig.class);
+		annWebConfig.register(EmployeeConfig.class);
 		annWebConfig.setServletContext(ctx);
 		ServletRegistration.Dynamic servlet = ctx.addServlet("dispatcher", new DispatcherServlet(annWebConfig));
 		servlet.setLoadOnStartup(1);

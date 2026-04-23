@@ -3,6 +3,7 @@ package com.spring.mvc.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,10 +13,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.mvc.model.Employee;
+import com.spring.mvc.service.EmployeeService;
 
 @Controller
-public class UserController {
+public class EmployeeController {
 
+	@Autowired
+	EmployeeService employeeService;
+	
 	static Map<Integer,Employee> map = null;
 	static int empId=0;
 	
@@ -56,13 +61,12 @@ public class UserController {
 	
 	
 	@PostMapping("/createUser")
-	public String createUser(@ModelAttribute Employee employee,Model model) {
+	public String createUser(@ModelAttribute Employee emp,Model model) {
 		
-		System.out.println(employee);
-		employee.setId(++empId);
-		map.put(empId, employee);
-		model.addAttribute("employee",employee);
-		
+		System.out.println(emp);
+		emp.setId(++empId);
+//		map.put(empId, employee);
+		employeeService.saveEmployee(emp);
 		return "success";
 	}
 	
