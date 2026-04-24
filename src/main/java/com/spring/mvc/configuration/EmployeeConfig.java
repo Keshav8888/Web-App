@@ -10,6 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -18,9 +19,21 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @ComponentScan(basePackages = "com.spring.mvc")
+@EnableTransactionManagement
 @Configuration
 public class EmployeeConfig implements WebMvcConfigurer {
 
+	@Bean
+	public ViewResolver viewResolver() {
+		System.out.println("SpringConfig.viewResolver()");
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+		viewResolver.setViewClass(JstlView.class);
+		viewResolver.setPrefix("/WEB-INF/JSP/");
+		viewResolver.setSuffix(".jsp");
+
+		return viewResolver;
+	}
+	
 	@Bean
     public DriverManagerDataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -53,18 +66,5 @@ public class EmployeeConfig implements WebMvcConfigurer {
     public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
     	return new HibernateTransactionManager(sessionFactory);
     }
-	
-	@Bean
-	public ViewResolver viewResolver() {
-		System.out.println("SpringConfig.viewResolver()");
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-		viewResolver.setViewClass(JstlView.class);
-		viewResolver.setPrefix("/WEB-INF/JSP/");
-		viewResolver.setSuffix(".jsp");
-
-		return viewResolver;
-	}
-	
-
 
 }

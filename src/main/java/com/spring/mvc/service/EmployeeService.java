@@ -9,7 +9,7 @@ import com.spring.mvc.dao.EmployeeDao;
 import com.spring.mvc.model.Employee;
 
 @Service
-@Transactional()
+@Transactional
 public class EmployeeService {
 	
 	@Autowired
