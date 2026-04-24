@@ -51,7 +51,7 @@ public class EmployeeConfig implements WebMvcConfigurer {
 
     @Bean
     public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
-        return new HibernateTransactionManager(sessionFactory);
+    	return new HibernateTransactionManager(sessionFactory);
     }
 	
 	@Bean
