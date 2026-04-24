@@ -1,5 +1,7 @@
 package com.spring.mvc.dao;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +24,10 @@ public class EmployeeDao {
 		System.out.println("EmployeeDao.saveEmployee()");
 		
 		hibernateTemplate.save(emp);
+	}
+
+	public List<Employee> getAllEmployees() {
+		
+		return hibernateTemplate.loadAll(Employee.class);
 	}
 }
