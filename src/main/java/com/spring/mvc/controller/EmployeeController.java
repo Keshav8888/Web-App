@@ -1,5 +1,5 @@
 package com.spring.mvc.controller;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,12 +8,6 @@ import com.spring.mvc.model.Employee;
 
 @Controller
 public class EmployeeController {
-
-    private final LocalSessionFactoryBean sessionFactory;
-
-    EmployeeController(LocalSessionFactoryBean sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
 
 	@GetMapping("/")
 	@ResponseBody
